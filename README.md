@@ -1,0 +1,2 @@
+# medusa
+Simple Script
