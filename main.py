@@ -24,7 +24,7 @@ while 1:
             sql.execute(f"{commands[2:]}")
             db.commit()
         except Exception as e:
-            print('Error: ' + e)
+            print(f'Error: {e}')
 
     elif commands.startswith('g '):
         try:
@@ -34,7 +34,7 @@ while 1:
             data = sql.execute(f"{commands[2:]}").fetchall()
             print(f'{data}')
         except Exception as e:
-            print('Error: ' + e)
+            print(f'Error: {e}')
 
     elif commands.startswith('3 '):
         try:
@@ -44,7 +44,7 @@ while 1:
             for data in sql.execute(f"{commands[2:]}").fetchall():
                 print(colored(f'{data[0]}.', green), colored(f'{data[1]} {data[2]}', cyan))
         except Exception as e:
-            print('Error: ' + e)
+            print(f'Error: {e})
 
     elif commands.startswith('2 '):
         try:
@@ -56,7 +56,7 @@ while 1:
                 print(colored(f'{data[0]}.', green), colored(f'{data[1]}', cyan))
 
         except Exception as e:
-            print('Error: ' + e)
+            print(f'Error: {e}')
 
     elif commands.startswith('4 '):
         try:
@@ -68,7 +68,7 @@ while 1:
                 print(colored(f'{data[0]}.', green), colored(f'{data[1]} {data[2]} {data[3]}', cyan))
 
         except Exception as e:
-            print('Error: ' + e)
+            print(f'Error: {e}')
 
     elif commands == 'cl':
         os.system('clear')
